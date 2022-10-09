@@ -1,20 +1,24 @@
-export class Persona{
-    protected nombre:string;
-    protected apellido:string;
-  
-    constructor (nombre:string, apellido:string){
-        this.nombre=nombre;
-        this.apellido=apellido;
+export class Persona {
+    protected nombre: string;
+    protected apellido: string;
+
+    constructor(nombre: string, apellido: string) {
+        this.nombre = nombre;
+        this.apellido = apellido;
     }
-    getNombre ():string{
+    public getNombre(): string {
         return this.nombre;
     }
-    setNombre(nombre:string):void{
-        this.nombre=nombre;
-    }getApellido():string{
+
+    public setNombre(nombre: string): void {
+        this.nombre = nombre;
+    } 
+
+    public getApellido(): string {
         return this.apellido;
     }
-    setApellido(apellido:string):void{
-        this.apellido=apellido;
+
+    public setApellido(apellido: string): void {
+        this.apellido = apellido;
     }
 }

@@ -1,23 +1,21 @@
 import { Persona } from "./persona";
 
 export class Masajista extends Persona {
-    protected masajes:boolean;
-        
-    constructor (nombre:string, apellido:string,masajes:boolean){
-    super (nombre,apellido);
-    this.masajes=masajes;
+    protected activo: boolean;
+
+    constructor(nombre: string, apellido: string, activo: boolean) {
+        super(nombre, apellido);
+        this.activo = activo;
     }
-       
-    public realizarMasaje(masajes:boolean):void{
-        
-        if (masajes==true) {
-            console.log ("El masajista "+ this.nombre,""+ this.apellido,"debe realizar masaje");
-           
-        } else { 
-         console.log ("El masajista "+this.nombre,""+this.apellido, "no debe realizar masajes");
-                }
+
+    public realizarMasaje(masajes: boolean): void {
+        if (masajes == true) {
+            console.log("El masajista " + this.nombre, "" + this.apellido, "debe realizar masaje");
+        } else {
+            console.log("El masajista " + this.nombre, "" + this.apellido, "no debe realizar masajes");
         }
     }
+}
 // Prueba de funcionamiento
 /*
 let masajista1 : Masajista = new Masajista ("Juan", "Benitez",false); 
