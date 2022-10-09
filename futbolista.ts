@@ -1,36 +1,37 @@
 import { Persona } from "./persona";
 
 export class Futbolista extends Persona {
-        protected titular:boolean;
-        protected camiseta: number;
-        
-        constructor (nombre:string, apellido:string, titular:boolean, camiseta:number){
-        super (nombre,apellido);
-        this.titular=titular;
-        this.camiseta=camiseta;
-       
-           }
-    
-    public getCamiseta():number{
+    protected titular: boolean;
+    protected camiseta: number;
+
+    constructor(nombre: string, apellido: string, titular: boolean, camiseta: number) {
+        super(nombre, apellido);
+        this.titular = titular;
+        this.camiseta = camiseta;
+    }
+
+    public getCamiseta(): number {
         return this.camiseta;
     }
-    public setCamiseta(camiseta:number):void{
-        this.camiseta=camiseta;
-        console.log("Al jugador "+this.nombre,""+this.apellido,"se le cambia el num de camiseta por la num " +this.camiseta,);
+ 
+    public setCamiseta(camiseta: number): void {
+        this.camiseta = camiseta;
+        console.log("Al jugador " + this.nombre, "" + this.apellido, "se le cambia el num de camiseta por la num " + this.camiseta,);
 
     }
-    public getTitular():boolean{
+
+    public getTitular(): boolean {
         return this.titular;
     }
-    public setTitular(titular:boolean):void{
-        this.titular=titular;
-        if (titular==true){
-            console.log("El jugador "+this.nombre,""+this.apellido, " es TITULAR");
+
+    public setTitular(titular: boolean): void {
+        this.titular = titular;
+        if (titular == true) {
+            console.log("El jugador " + this.nombre, "" + this.apellido, " es TITULAR");
         } else {
-            console.log("El jugador "+this.nombre,""+this.apellido, " es SUPLENTE");
+            console.log("El jugador " + this.nombre, "" + this.apellido, " es SUPLENTE");
         }
     }
-    
 }
 //Prueba de Funcionamiento
 
